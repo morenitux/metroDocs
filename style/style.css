@@ -1,0 +1,24 @@
+/* Go Top button */
+.top {
+   --offset: 30px;
+   position: sticky;
+   bottom: 16px;
+   margin-top: calc(100vh + var(--offset));
+   text-decoration: none;
+   padding: 10px;
+   color: rgb(40, 39, 39);
+   background: rgba(210, 210, 210, 0.7);
+   border-radius: 7px;
+   white-space: nowrap;
+   font-size: .9em;
+   font-weight: 700;
+   float: right;
+   margin-right: 20px;
+}
+
+
+ /* tablas de fracciones */
+
+ table.table.table-sm.table-bordered.border-dark.text-center.align-middle{
+   font-size: .89em;
+ }
