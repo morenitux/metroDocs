@@ -1,6 +1,6 @@
-# metroDocs 
+## metroDocs 
 
-metroDocs** es una plataforma web diseñada para centralizar y mostrar información relevante del Sistema de Transporte Colectivo Metro. Incluye procedimientos operativos, datos de líneas, manuales, documentación técnica y otros recursos útiles para personal técnico.
+metroDocs es una plataforma web diseñada para centralizar y mostrar información relevante del Sistema de Transporte Colectivo Metro. Incluye procedimientos operativos, datos de líneas, manuales, documentación técnica y otros recursos útiles para personal técnico.
 
 ## 🚇 Características principales
 
