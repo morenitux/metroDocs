@@ -14,5 +14,5 @@ metroDocs es una plataforma web diseñada para centralizar y mostrar informació
 
 - **Frontend:** HTML5, CSS3, JavaScript
 - **Frameworks:** Bootstrap
-- **Base de datos: no-database
+- **Base de datos:** no-database
 
