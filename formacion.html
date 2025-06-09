@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formación de trenes</title>
+    <title>Formacion</title>
 </head>
 <body>
 
 <nav class="navbar navbar-expand navbar-dark bg-dark">
-   <a class="navbar-brand" href="#">PCL-12 JR </a>
-   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-   </button>
+      <a class="navbar-brand" href="larines.html">PCL-12 JR </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-   <div class="collapse navbar-collapse" id="navbarsExample02">
-      <ul class="navbar-nav mr-auto">
-      <li class="nav-item"> <a class="nav-link active" href="larines.html">Larines</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="directorio.html">Directorio</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="formacion.html">Formación de Trenes</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="manuales.html">Manuales</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="procedimientos.html">Procedimientos</a> </li>
-      </ul>
-   </div>
+      <div class="collapse navbar-collapse" id="navbarsExample02">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"> <a class="nav-link" href="larines.html">Larines</a> </li>
+          <li class="nav-item" hidden> <a class="nav-link" href="directorio.html">Directorio</a> </li>
+          <li class="nav-item"> <a class="nav-link active" href="formacion.html">Formación de Trenes</a> </li>
+            <li class="nav-item" hidden> <a class="nav-link" href="manuales.html">Manuales</a> </li>
+            <li class="nav-item" hidden> <a class="nav-link" href="procedimientos.html">Procedimientos</a> </li>
+        </ul>
+      </div>
 </nav>
 
 <div class="container mt-2">
 
     <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Buscar UT, FR o FN..." aria-label="Buscar UT, FR o FN..." aria-describedby="basic-addon2">
-        <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button">Buscar</button>
-        </div>
+      <input class="form-control" id="myInput" type="text" placeholder="Buscar UT, FR o FN..." >
     </div>
 
     <table class="table table-bordered table-sm table-hover text-center">
@@ -41,7 +41,7 @@
             </tr>
         </thead>
 
-        <tbody>          
+        <tbody id="miFormacion">          
             <tr><td scope='row'>UT-01 FR0001/0002 FE-10</td> <td>1</td> <td>1</td> <td> 1001</td> <td>2001 </td> <td>3001</td> <td>2002</td> <td>1002</td> <td>2</td></tr>
             <tr><td scope='row'>UT-02 FR0003/0004 FE-10</td> <td>2</td> <td>3</td> <td> 1003</td> <td>2003 </td> <td>3002</td> <td>2004</td> <td>1004</td> <td>4</td></tr>
             <tr><td scope='row'>UT-03 FR0005/0006 FE-10</td> <td>3</td> <td>5</td> <td> 1005</td> <td>2005 </td> <td>3003</td> <td>2006</td> <td>1006</td> <td>6</td></tr>
@@ -75,11 +75,18 @@
         </tbody>
     </table>
 
-
-
-
-
 </div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#miFormacion tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 
 </body>
 </html>
