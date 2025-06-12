@@ -2,57 +2,178 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Larines</title>
 </head>
-<body>
 
 <nav class="navbar navbar-expand navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">PCL-12 JR </a>
+    <a class="navbar-brand" href="larines.html">PCL-12 JR </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
+      
       <div class="collapse navbar-collapse" id="navbarsExample02">
         <ul class="navbar-nav mr-auto">
-         <li class="nav-item"> <a class="nav-link active" href="larines.html">Larines</a> </li>
-         <li class="nav-item"> <a class="nav-link" href="directorio.html">Directorio</a> </li>
-         <li class="nav-item"> <a class="nav-link" href="formacion.html">Formación de Trenes</a> </li>
-         <li class="nav-item"> <a class="nav-link" href="manuales.html">Manuales</a> </li>
-         <li class="nav-item"> <a class="nav-link" href="procedimientos.html">Procedimientos</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="larines.html">Larines</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="formacion.html">Formación de Trenes</a> </li>
+          <li class="nav-item" > <a class="nav-link active" href="directorio.html">Directorio</a> </li>
+            <li class="nav-item" hidden> <a class="nav-link" href="manuales.html">Manuales</a> </li>
+            <li class="nav-item" hidden> <a class="nav-link" href="procedimientos.html">Procedimientos</a> </li>
         </ul>
       </div>
 </nav>
 
 <div class="container mt-2">
-
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Buscar área..." aria-label="Buscar área..." aria-describedby="basic-addon2">
-        <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button">Buscar</button>
-        </div>
-    </div>
-
-    <table class="table table-striped table-sm table-hover table-bordered">
-        <thead>
-            <tr>
-                <th class="text-center" >Área</th> 
-                <th style='width:30%'>Extensiones</th>
-            </tr>
-        </thead>
-        <tbody>          
-            <tr><td scope='row'>Almacenes ticomán</td><td>5788, 5722</td></tr>
-            <tr><td scope='row'>Alta tensión, Línea 12 (Plataforma de pruebas)</td><td>8055, 6936</td></tr>
-            <tr><td scope='row'>Ambulancias Puesto Central de Monitoreo (PCM)</td><td>1959, 6861</td></tr>
+  <input class="form-control" id="myInput" type="text" placeholder="Buscar texto..">
+  <br>
+  <table class="table table-striped table-sm table-hover table-bordered">
+      <thead>
+         <tr>
+            <th class="text-center" style='width:10%'>Área</th>
+            <th style='width:20%'>Telefono / Extensiones</th>
+         </tr>
+      </thead>
+        <tbody id="miDirecotrio">          
+            <tr><td scope='row'>Acceso a Locales Técnicos</td><td>8420</td></tr>
+            <tr><td scope='row'>Almacenes Ticomán</td><td>5788 / 5722</td></tr>
+            <tr><td scope='row'>Alta Tensión L12 (Plataforma de pruebas SR-00)</td><td>8085 / 6936</td></tr>
+            <tr><td scope='row'>Ambulancias Puesto Central de Monitoreo (PCM)</td><td>1959 / 6861</td></tr>
+            <tr><td scope='row'>Atención al usuario</td><td>4861 / 4951 / 1847</td></tr>
+            <tr><td scope='row'>Audiometro (PCCII Primer piso)</td><td>4812 / 5252</td></tr>
+            <tr><td scope='row'>Aveías cámaras</td><td>4958 / 5044</td></tr>
+            <tr><td scope='row'>Averías Aparatos de vía</td><td>6010 / 8097 / 8098 / 4822</td></tr>
+            <tr><td scope='row'>Averías ICA (reportes)</td><td>5552729991</td></tr>
+            <tr><td scope='row'>Averias Material Rodante</td><td>8095 / 6982 / 8031</td></tr>
+            <tr><td scope='row'>Averías Tláhuac</td><td>8095</td></tr>
+            <tr><td scope='row'>Baja Tension L12</td><td>6747 / 8081</td></tr>
+            <tr><td scope='row'>Baja Tensión Taller Tlahuac</td><td>8085 / 6947 / 6940</td></tr>
+            <tr><td scope='row'>Balderas</td><td>1959</td></tr>
+            <tr><td scope='row'>Cajas Delicias</td><td>5123 / 5124</td></tr>
+            <tr><td scope='row'>Cajas Revolución</td><td>3514</td></tr>
+            <tr><td scope='row'>Caseta de PA PCL12</td><td>6900 / 6901 / 6979 / 6879</td></tr>
+            <tr><td scope='row'>Caseta Piedra I (Talleres Tláhuac)</td><td>6900</td></tr>
+            <tr><td scope='row'>Caseta Piedra II ( Talleres Tláhuac)</td><td>6901</td></tr>
+            <tr><td scope='row'>Caseta Policia PCL</td><td>6879</td></tr>
+            <tr><td scope='row'>Caseta vigilancia PCL12</td><td>66879</td></tr>
+            <tr><td scope='row'>CC PCL12</td><td>8015 / 8016</td></tr>
+            <tr><td scope='row'>CCTV Tlahuac</td><td>6775 / 6747</td></tr>
+            <tr><td scope='row'>CENDI</td><td>4427 / 4433</td></tr>
+            <tr><td scope='row'>CEO</td><td>5546119580 / 4858 / 2012</td></tr>
+            <tr><td scope='row'>CEO Delicias</td><td>4500 / 4555 / 2010</td></tr>
+            <tr><td scope='row'>Clinica Tasqueña</td><td>4711</td></tr>
+            <tr><td scope='row'>COCOL</td><td>4721 / 4683 / 3559</td></tr>
+            <tr><td scope='row'>COE Lineas 7,8,9, A y 12</td><td>4633 / 4635</td></tr>
+            <tr><td scope='row'>COE PCC-II L7,8,9,A y 12</td><td>4633 / 4635 / 3431</td></tr>
+            <tr><td scope='row'>Comandante L12</td><td>6791</td></tr>
+            <tr><td scope='row'>Comedor Estación Tláhuac</td><td>6919</td></tr>
+            <tr><td scope='row'>Comedor PCL12</td><td>6918</td></tr>
+            <tr><td scope='row'>Comedor Talleres Tláhuac</td><td>6918</td></tr>
+            <tr><td scope='row'>Comisión Mixta de Capacitacion y Adiestramiento</td><td>4086 / 5534</td></tr>
+            <tr><td scope='row'>Comisión Mixta de Escalafon</td><td>5520 / 4011</td></tr>
+            <tr><td scope='row'>Conmutador</td><td>57091133</td></tr>
+            <tr><td scope='row'>Contraloría</td><td>4776 / 4778 / 5174</td></tr>
+            <tr><td scope='row'>Coord. De Comunicación y Peaje</td><td>4805 / 1828</td></tr>
+            <tr><td scope='row'>Coord. De Desarrollo Tecnológico</td><td>4053 / 4061</td></tr>
+            <tr><td scope='row'>Coord. De Seguridad Industrial</td><td>4480 / 4138 / 5546 / 5547 / 4137</td></tr>
+            <tr><td scope='row'>Coord. De Taquillas</td><td>5518098878 / 43293249</td></tr>
+            <tr><td scope='row'>Coordinacion del Transp de Linea 12</td><td>8028</td></tr>
+            <tr><td scope='row'>Corrientes debiles (Alstom - Tláhuac)</td><td>8097 / 8098</td></tr>
+            <tr><td scope='row'>Corrientes fuertes (Alstom - Tláhuac)</td><td>6709</td></tr>
+            <tr><td scope='row'>Escaleras electromecánicas</td><td>6643</td></tr>
+            <tr><td scope='row'>Falta de Agua en Estación</td><td>4421 / 1929</td></tr>
+            <tr><td scope='row'>Fondo de Ahorro</td><td>4429 / 2574</td></tr>
+            <tr><td scope='row'>Gerencia de atencion a usuarios</td><td>5202 / 4861 / 4951</td></tr>
+            <tr><td scope='row'>Gerencia de INCADE</td><td>4003</td></tr>
+            <tr><td scope='row'>Gerencia de Instalaciones Fijas</td><td>2438 / 4571</td></tr>
+            <tr><td scope='row'>Gerencia de Lineas 1,3,4 y 12</td><td>5589526573</td></tr>
+            <tr><td scope='row'>Gerencia de Lineas 7,8,9,A y 12 - Enlace administrativo</td><td>2072 / 2068</td></tr>
+            <tr><td scope='row'>Gerencia de Obras y Mantenimiento</td><td>4418</td></tr>
+            <tr><td scope='row'>Gerencia Juridica</td><td>4928 / 4758 / 4762 / 4771</td></tr>
+            <tr><td scope='row'>Guardia de Supevisión de Taquillas</td><td>6829 / 6830 / 6831</td></tr>
+            <tr><td scope='row'>ICA Escaleras electricas</td><td>5591 / 5598</td></tr>
+            <tr><td scope='row'>Ingeniería y Nuevos Proyectos (INCADE)</td><td>4052 / 5474</td></tr>
+            <tr><td scope='row'>Instalaciones Hidráulicas</td><td>4820 / 4508 / 4849</td></tr>
+            <tr><td scope='row'>Instalaciones Mecanicas (Chabacano)</td><td>4608 / 3312</td></tr>
+            <tr><td scope='row'>Instalaciones Mecanicas (Nopalera)</td><td>6734 / 6735</td></tr>
+            <tr><td scope='row'>Jefatura de matenimiento MR Taller Tlahuac L12</td><td>6982</td></tr>
+            <tr><td scope='row'>Jefatura Mixcoac</td><td>66832 / 66833</td></tr>
+            <tr><td scope='row'>Jefatura Tláhuac</td><td>66828 / 66673</td></tr>
+            <tr><td scope='row'>Jefatura Transportación Mixcoac</td><td>6832 / 6833</td></tr>
+            <tr><td scope='row'>Jefatura Transportación Tlahuac</td><td>6673 / 6828 / 6749 / 6747</td></tr>
+            <tr><td scope='row'>Jefe Operación Taquilla L12</td><td>6829</td></tr>
+            <tr><td scope='row'>Mando Centralizado</td><td>6805 / 6818</td></tr>
+            <tr><td scope='row'>Mando Centralizado para resetear servidores de PCL12</td><td>6875 / 6805</td></tr>
+            <tr><td scope='row'>Mantenimiento correctivo al Material Rodante</td><td>8032 / 8033</td></tr>
+            <tr><td scope='row'>Material Rodante</td><td>5558037499 / 66963 / 66947</td></tr>
+            <tr><td scope='row'>Nóminas</td><td>2400 / 2474 / 2475</td></tr>
+            <tr><td scope='row'>Normatividad y contratos</td><td>4522 / 4502</td></tr>
+            <tr><td scope='row'>Objetos extraviados</td><td>55425397 / 4643</td></tr>
+            <tr><td scope='row'>Oficinas ICA </td><td>5552729991</td></tr>
+            <tr><td scope='row'>PATR's</td><td>2527 / 4517 / 4521</td></tr>
+            <tr><td scope='row'>PCCI</td><td>4787 / 4788</td></tr>
+            <tr><td scope='row'>PCCII</td><td>4786 / 4756</td></tr>
+            <tr><td scope='row'>PCL LA</td><td>6013 / 6014</td></tr>
+            <tr><td scope='row'>PCL12 JRs</td><td>8012 / 8013 / 8015</td></tr>
+            <tr><td scope='row'>PCL12 Telefono directo</td><td>5709-1235 / 5445-3212 y terminaciones 13 y 14</td></tr>
+            <tr><td scope='row'>PCM PCCI</td><td>1959 / 6860 / 6861</td></tr>
+            <tr><td scope='row'>Peaje L12 (Chabacano)</td><td>3311 / 3607 / 3361</td></tr>
+            <tr><td scope='row'>Personas caidas en escaleras o atrapadas en elevador</td><td>5540843986 / 5541923423</td></tr>
+            <tr><td scope='row'>Pilotaje Línea 12 (Atlalilco)</td><td>8883 / 6882</td></tr>
+            <tr><td scope='row'>Pilotaje Línea 12 (Tezonco)</td><td>6648 / 6739</td></tr>
+            <tr><td scope='row'>Pipas de Agua</td><td>1229</td></tr>
+            <tr><td scope='row'>PML Mixcoac</td><td>6699</td></tr>
+            <tr><td scope='row'>PML Tlahuac</td><td>6600</td></tr>
+            <tr><td scope='row'>PMT Tlahuac</td><td>8021</td></tr>
+            <tr><td scope='row'>Policlinica Cuauhtemoc</td><td>2648 / 2649</td></tr>
+            <tr><td scope='row'>Policlinica Tasqueña</td><td>3519 / 3524</td></tr>
+            <tr><td scope='row'>Policlinica Ticomán</td><td>4280 / 4285</td></tr>
+            <tr><td scope='row'>Policlinica Zaragoza</td><td>4123 / 5467 </td></tr>
+            <tr><td scope='row'>Prestaciones Sociales</td><td>2544 / 2533</td></tr>
+            <tr><td scope='row'>Prevencion y control de riesgos (Juárez)</td><td>4542 / 1810</td></tr>
+            <tr><td scope='row'>Protección civil (Cuauhtemoc)</td><td>480 / 2636 / 2451</td></tr>
+            <tr><td scope='row'>Proteccion Civil STC</td><td>2634 / 4580 / 2451</td></tr>
+            <tr><td scope='row'>Registro y control de asistencia</td><td>2531 / 2532 / 4593</td></tr>
+            <tr><td scope='row'>Reproducciones Balbuena (copias)</td><td>4432</td></tr>
+            <tr><td scope='row'>Sanatorio Durango</td><td>51484646</td></tr>
+            <tr><td scope='row'>SEAT Control de energía (Atlalílco)</td><td>6866 / 6867</td></tr>
+            <tr><td scope='row'>SEAT Estrella</td><td>6867 / 6866</td></tr>
+            <tr><td scope='row'>Seguridad Industrial</td><td>4137 / 4138 / 6912 / 5546</td></tr>
+            <tr><td scope='row'>Selección de personal</td><td>2477 / 4582</td></tr>
+            <tr><td scope='row'>Señalización L12 (Atlalilco)</td><td>6881 / 8082</td></tr>
+            <tr><td scope='row'>Servicios Generales</td><td>4421 / 4597</td></tr>
+            <tr><td scope='row'>Servicios social Balbuena</td><td>2814 / 2546 / 2547</td></tr>
+            <tr><td scope='row'>SIMA Salvaescaleras, Tel directo</td><td>4331-7038</td></tr>
+            <tr><td scope='row'>Subgerencia de Lineas 1,3,4 y 12</td><td>4932 / 4933</td></tr>
+            <tr><td scope='row'>Subgerencia de Obras (para averías de obras, Ing. David Reynaga)</td><td>4407 / 4408</td></tr>
+            <tr><td scope='row'>Supervisores Mixcoac</td><td>6832 / 6833</td></tr>
+            <tr><td scope='row'>Supervisores Tláhuac</td><td>6828 / 6673 / 6749</td></tr>
+            <tr><td scope='row'>TCO PCL12</td><td>8010 / 8011</td></tr>
+            <tr><td scope='row'>TELECOM (Atlalilco)</td><td>8091</td></tr>
+            <tr><td scope='row'>Unidad de Cursos INCADE</td><td>4080 / 5477</td></tr>
+            <tr><td scope='row'>Vías L12 (Tláhuac)</td><td>6741 / 8080</td></tr>
+            <tr><td scope='row'>Vigilancia Base Estaño, PCCI, Servicios externos (para PA)</td><td>2485</td></tr>
+            <tr><td scope='row'>Vigilancia Base Lince</td><td>6775</td></tr>
+            <tr><td scope='row'>Vigilancia Base Titanio (Tláhuac)</td><td>2485 / 6775 / 5543108283</td></tr>
         </tbody>
-    </table>
-
-
-
-
-
+    </tbody>
+  </table>
+  
+  <p class='text-center'><small>Sistema de Apoyo para Jefes de Reguladores PCL-12.</small></p>
 </div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#miDirecotrio tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 
 </body>
 </html>
